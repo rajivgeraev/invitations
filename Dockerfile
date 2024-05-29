@@ -9,5 +9,4 @@ COPY . .
 
 RUN go build -o main .
 
-# Запускаем приложение
 CMD ["./main"]
