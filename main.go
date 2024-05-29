@@ -11,7 +11,6 @@ import (
 )
 
 func main() {
-	// Подключение к базе данных
 	mongoURL := os.Getenv("MONGO_URL")
 	if mongoURL == "" {
 		log.Fatal("MONGO_URL is not set in environment variables")
