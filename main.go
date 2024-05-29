@@ -7,7 +7,7 @@ import (
 	"github.com/gorilla/mux"
 	"github.com/joho/godotenv"
 
-	"github.com/rajivgeraev/routes"
+	"github.com/rajivgeraev/invitations/routes"
 )
 
 func main() {

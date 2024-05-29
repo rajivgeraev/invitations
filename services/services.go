@@ -5,8 +5,8 @@ import (
 	"errors"
 	"time"
 
-	"github.com/rajivgeraev/config"
-	"github.com/rajivgeraev/models"
+	"github.com/rajivgeraev/invitations/config"
+	"github.com/rajivgeraev/invitations/models"
 
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"

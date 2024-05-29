@@ -5,7 +5,7 @@ import (
 	"net/http"
 
 	"github.com/gorilla/mux"
-	"github.com/rajivgeraev/services"
+	"github.com/rajivgeraev/invitations/services"
 )
 
 type InvitationRequest struct {
