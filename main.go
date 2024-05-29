@@ -3,21 +3,25 @@ package main
 import (
 	"log"
 	"net/http"
+	"os"
 
 	"github.com/gorilla/mux"
-	"github.com/joho/godotenv"
-
+	"github.com/rajivgeraev/invitations/config"
 	"github.com/rajivgeraev/invitations/routes"
 )
 
 func main() {
-	if err := godotenv.Load(); err != nil {
-		log.Fatal("Error loading .env file")
+	// Подключение к базе данных
+	mongoURL := os.Getenv("MONGO_URL")
+	if mongoURL == "" {
+		log.Fatal("MONGO_URL is not set in environment variables")
 	}
 
-	router := mux.NewRouter()
+	config.ConnectDB()
 
+	router := mux.NewRouter()
 	routes.InitializeRoutes(router)
 
+	log.Println("Server started on port 8080")
 	log.Fatal(http.ListenAndServe(":8080", router))
 }
